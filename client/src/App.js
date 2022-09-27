@@ -15,7 +15,7 @@ function App() {
   const [employeeList, setEmployeeList] = useState([]);
   
   const getEmployees = () => {
-    Axios.get('http://localhost:3001/employees').then((response) => {
+    Axios.get('http://localhost:3001/teeraphatdatabase').then((response) => {
       setEmployeeList(response.data); 
     });
   }
@@ -71,7 +71,7 @@ function App() {
             <input 
               type="email"
               className="from-control"
-              placeholder="Enter email"
+              placeholder="Youremail@email.com"
               onChange={(event) => {
                 setEmail(event.target.value)
               }}
@@ -82,7 +82,7 @@ function App() {
             <input 
               type="text"
               className="from-control"
-              placeholder="Enter name"
+              placeholder="Jonh Palace"
               onChange={(event) => {
                 setName(event.target.value)
               }}
@@ -143,8 +143,12 @@ function App() {
         <br/><br/>
         {employeeList.map((val, key) => {
           return (
-            <div style={{width: "350px"}} className='employee card'>
-              <div className='card-body text-left'>
+            <div style={{margin: "10px",
+                         border: "2px solid black",
+                         borderRadius: "20px",
+                         marginRight: "300px",
+                         marginLeft: "300px"}} className='employee card'>
+              <div className='card-body text-center'>
                 <p className='card-text'>Email: {val.email}</p>
                 <p className='card-text'>Name: {val.name}</p>
                 <p className='card-text'>Age: {val.age}</p>

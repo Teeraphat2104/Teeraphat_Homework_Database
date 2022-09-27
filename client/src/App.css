@@ -11,13 +11,18 @@ body {
 h1 {
   margin: 50px;
 
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   border: 1px solid black;
   border-radius: 15px;
 
   background-color: yellow;
+
+  color: rgb(94, 77, 255);
+  text-shadow: 4px 4px 4px black;
+
+  font-size: 72px;
 }
 
 label {
@@ -38,6 +43,7 @@ label {
 
   background-color: rgb(255, 255, 164);
 }
+
 input {
   border-radius: 5px;
 
@@ -54,6 +60,7 @@ button {
 
   padding: 10px;
 }
+
 button:hover{
   color: white;
   background-color: rgb(0, 0, 0);
@@ -62,4 +69,6 @@ button:hover{
   border: 2px solid rgb(250, 246, 0);
 
   padding: 10px;
+  transition-delay: 0.2ms;
 }
+

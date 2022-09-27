@@ -11,11 +11,11 @@ const db = mysql.createConnection({
     user: "root",
     host: "localhost",
     password: "root999",
-    database: "employeesystem"
+    database: "teeraphatdatabase"
 })
 
-app.get('/employees', (req, res) => {
-    db.query("SELECT * FROM employees", (err, result) => {
+app.get('/teeraphatdatabase', (req, res) => {
+    db.query("SELECT * FROM teeraphatdatabase", (err, result) => {
         if (err) {
             console.log(err);
         } else {
@@ -32,7 +32,7 @@ app.post('/create', (req, res) => {
     const fevfood = req.body.fevfood;
     const phonno = req.body.phonno;
 
-    db.query("INSERT INTO employees (email, name, age, country, fevfood, phonno) VALUES(?,?,?,?,?,?)", 
+    db.query("INSERT INTO teeraphatdatabase (email, name, age, country, fevfood, phonno) VALUES(?,?,?,?,?,?)", 
     [email, name, age, country, fevfood, phonno],
     (err, result) => {
         if (err) {
@@ -47,7 +47,7 @@ app.post('/create', (req, res) => {
 app.put('/update', (req, res) => {
     const id = req.body.id;
     const phonno = req.body.phonno;
-    db.query("UPDATE employees SET phonno = ? WHERE id = ?", [phonno, id], (err, result) => {
+    db.query("UPDATE teeraphatdatabase SET phonno = ? WHERE id = ?", [phonno, id], (err, result) => {
         if (err) {
             console.log(err);
         } else {
